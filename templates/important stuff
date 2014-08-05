@@ -1,0 +1,80 @@
+
+https://pythonhosted.org/Flask-CMS/
+
+https://pythonhosted.org/Flask-CMS/
+
+http://flask-admin.readthedocs.org/en/latest/
+
+pip install flask-admin
+
+http://flask-admin.readthedocs.org/en/latest/quickstart/
+
+we want specifically model views 
+from SurfBI Mobile to Dhruv Bansal (privately):
+from Srikanth Jandhyala to SurfBI Mobile (privately):
+we want specifically model views 
+from Srikanth Jandhyala to SurfBI Mobile (privately):
+pip install flask-sqlalchemy
+from SurfBI Mobile to Dhruv Bansal (privately):
+from Srikanth Jandhyala to SurfBI Mobile (privately):
+https://pythonhosted.org/Flask-SQLAlchemy/
+from Srikanth Jandhyala to SurfBI Mobile (privately):
+https://pythonhosted.org/Flask-SQLAlchemy/quickstart.html
+from SurfBI Mobile to Dhruv Bansal (privately):
+rom Srikanth Jandhyala to SurfBI Mobile (privately):
+User("foo", "foo@bar.com")
+from SurfBI Mobile to Dhruv Bansal (privately):
+from Srikanth Jandhyala to SurfBI Mobile (privately):
+Project Name, Amount, Year, Description, Area, NGO Name
+from SurfBI Mobile to Dhruv Bansal (privately):
+rom Srikanth Jandhyala to SurfBI Mobile (privately):
+Projects
+from SurfBI Mobile to Dhruv Bansal (privately):
+from Srikanth Jandhyala to SurfBI Mobile (privately):
+localhost:5000/admin
+from SurfBI Mobile to Dhruv Bansal (privately):
+rom Srikanth Jandhyala to SurfBI Mobile (privately):
+https://pythonhosted.org/Flask-SQLAlchemy/queries.html
+from SurfBI Mobile to Dhruv Bansal (privately):
+from Srikanth Jandhyala to SurfBI Mobile (privately):
+localhost:5000/user/dhruv
+from Srikanth Jandhyala to SurfBI Mobile (privately):
+localhost:5000/user/srikanth
+from SurfBI Mobile to Dhruv Bansal (privately):
+from Srikanth Jandhyala to SurfBI Mobile (privately):
+localhost:5000/projects/2014
+from SurfBI Mobile to Dhruv Bansal (privately):
+from Srikanth Jandhyala to SurfBI Mobile (privately):
+localhost:5000/projects/2014
+from Srikanth Jandhyala to SurfBI Mobile (privately):
+*2013
+from SurfBI Mobile to Dhruv Bansal (privately):
+from Srikanth Jandhyala to SurfBI Mobile (privately):
+projects = Projects.query.filer_by(year=2014)
+from Srikanth Jandhyala to SurfBI Mobile (privately):
+*filter
+from SurfBI Mobile to Dhruv Bansal (privately):
+from Srikanth Jandhyala to SurfBI Mobile (privately):
+user is a dictionary 
+from SurfBI Mobile to Dhruv Bansal (privately):
+from Srikanth Jandhyala to SurfBI Mobile (privately):
+projects 
+from Srikanth Jandhyala to SurfBI Mobile (privately):
+{% for project in projects %}
+from Srikanth Jandhyala to SurfBI Mobile (privately):
+{% endfor %}
+from SurfBI Mobile to Dhruv Bansal (privately):
+rom Srikanth Jandhyala to SurfBI Mobile (privately):
+<h2> project.project_name </h2>
+from Srikanth Jandhyala to SurfBI Mobile (privately):
+<p> project.description </p>
+from Srikanth Jandhyala to SurfBI Mobile (privately):
+<h2> {{ project.project_name }} </h2>
+from SurfBI Mobile to Dhruv Bansal (privately):
+from Srikanth Jandhyala to SurfBI Mobile (privately):
+the first one was wrong you need to wrap in curly braces
+from Srikanth Jandhyala to SurfBI Mobile (privately):
+mongo
+from SurfBI Mobile to Dhruv Bansal (privately):
+from Srikanth Jandhyala to SurfBI Mobile (privately):
+mongodb://localhost:27017

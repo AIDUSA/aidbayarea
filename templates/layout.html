@@ -1,0 +1,122 @@
+{% extends "bootstrap/base.html" %}
+	{% block head %}
+		{% block title %}
+			<title>Welcome to the website for AID (Association for India's Development)</title>
+		{% endblock %}
+
+		{% block styles %}
+			{{super()}}
+			{% block style_includes %}
+				<link rel="stylesheet" media="screen" type="text/css" href="{{url_for('static', filename='css/bootstrap.css')}}"/>
+				<link rel="stylesheet" media="screen" type="text/css" href="{{url_for('static', filename='css/modern-business.css')}}"/>
+				<link rel="stylesheet" media="screen" type="text/css" href="{{url_for('static', filename='font-awesome/css/font-awesome.min.css')}}"/>
+			{% endblock %}
+
+			{% block customstyles %}
+			{% endblock %}
+		{% endblock %}
+	{% endblock %}
+
+	{% block body %}
+
+		{% block navbar %}
+			<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+		        <div class="container">
+		            <div class="navbar-header">
+		                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+		                    <span class="sr-only">Toggle navigation</span>
+		                    <span class="icon-bar"></span>
+		                    <span class="icon-bar"></span>
+		                    <span class="icon-bar"></span>
+		                </button>
+		                <!-- You'll want to use a responsive image option so this logo looks good on devices - I recommend using something like retina.js (do a quick Google search for it and you'll find it) -->
+		                <a class="navbar-logo" href="{{ url_for('index') }}">
+		                    <img src="static/images/AIDLogo.png" alt=""></img>
+		                </a>
+		                <a class="navbar-brand" href="{{ url_for('index') }}">Association for India's Development<br>Bay Area Chapter</a>
+		            </div>
+
+		            <!-- Collect the nav links, forms, and other content for toggling -->
+		            <div>
+		                <a class="navbar-bridge">
+		                    <img src="static/images/bridge.png" alt=""></img>
+		                </a>
+		            </div>
+		            <div class="collapse navbar-collapse navbar-ex1-collapse">
+		                <ul class="nav navbar-nav navbar-right">
+		                    <li><a href="{{ url_for('about') }}">About</a>
+		                    </li>
+		                    <li><a href="{{ url_for('events') }}">Events</a>
+		                    </li>
+		                    <li><a href="{{ url_for('projects') }}">Projects</a>
+		                    </li>
+		                    <li><a href="{{ url_for('donate') }}">Donate</a>
+		                    </li>
+		                    <li><a href="{{ url_for('volunteer') }}">Volunteer</a>
+		                    </li>
+		                </ul>
+		            </div>
+
+		            <!-- /.navbar-collapse -->
+		        </div>
+        <!-- /.container -->
+    		</nav>
+		{% endblock %}
+
+		{% block content %}
+		{% endblock %}
+
+		{% block tail %}
+			<div class="containerfooter">
+	            <footer>
+	                <div class="row">
+	                    <div class="col-lg-3">
+	                        <p><strong>About AID</strong></p><br>
+	                        <p><a href="{{ url_for('about') }}">Our Mission</a></p><br>
+	                        <p><a href="{{ url_for('projects') }}">Projects</a></p><br>
+	                        <p><a href="{{ url_for('events') }}">Events</a></p>
+	                    </div>
+	                    <div class="col-lg-3">
+	                        <p><strong>Social</strong></p><br>
+	                        <p><a href="{{ url_for('about') }}">Email</a></p><br>
+	                        <p><a href="{{ url_for('about') }}">Facebook</a></p><br>
+	                        <p><a href="{{ url_for('events') }}">Events</a></p>
+	                    </div>
+	                    <div class="col-lg-3">
+	                        <p><strong>Resources</strong></p><br>
+	                        <p><a href="{{ url_for('faq') }}">FAQS</a></p><br>
+	                        <p><a href="{{ url_for('volunteer') }}">Volunteer</a></p>
+	                    </div>
+	                    <div class="col-lg-3">
+	                        <p><strong>Contact Us</strong></p>
+	                        <p><br>1-800-000-0000</p>
+	                        <p><br>330 Some Street</p>
+	                        <p><br>Mountain View, Ca 95014</p>
+	                    </div>
+	                </div>
+	            </footer>
+	        </div>
+		{% endblock %}
+
+		{% block scripts %}
+
+			{{super()}}
+			{% block includes %}
+				<script type="text/javascript" src="{{url_for('static', filename='js/jquery-1.10.2.js')}}"></script>
+				<script type="text/javascript" src="{{url_for('static', filename='js/bootstrap.js')}}"></script>
+  				<script type="text/javascript" src="{{ url_for('static', filename='js/modern-business.js') }}"></script>
+				<script>
+					 function setPropertyTo(itemID, value, property) {
+		            	var item = document.getElementById(itemID);
+		           		item.style[property] = value + "px";
+        			}
+        		</script>
+			{% endblock %}
+
+			{% block customscripts %}
+			{% endblock %}
+
+		{% endblock %}
+
+	{% endblock %}
+

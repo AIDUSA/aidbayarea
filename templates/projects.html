@@ -1,0 +1,40 @@
+{% extends "layout.html" %}
+
+    {% block content %}
+
+        <div class="container">
+
+            <div class="row">
+
+                <div class="col-lg-12">
+                    <h1 class="page-header">Projects
+                        <small>See Everything We Have Done</small>
+                    </h1>
+                    <ol class="breadcrumb">
+                        <li><a href="{{ url_for('index') }}">Home</a>
+                        </li>
+                        <li class="active">Projects</li>
+                    </ol>
+                </div>
+
+            </div>
+
+                <div class="row">
+                    {% for temp in v_projects %}
+                        <div class="col-md-7">
+                            <a href="{{ url_for('projectdetails', project_id=temp.id) }}"> {{ temp.name }} </a>
+                                <img class="img-responsive" src= {{ "static/images/" + temp.image_field }}>
+                            </a>
+                        </div>
+
+                        <div class="col-md-5">
+                            <h3>{{ temp.name }}</h3>
+                            <h4>{{ temp.area }}</h4>
+                            <p>{{ temp.description }}</p>
+                            <a class="btn btn-primary" href= "{{url_for('projectdetails', project_id=temp.id) }}">View Project <i class="fa fa-angle-right"></i></a>
+                        </div>
+                        <hr>
+                    {% endfor %}
+                </div>
+        </div>
+    {% endblock %}

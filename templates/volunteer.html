@@ -1,0 +1,48 @@
+{% extends "layout.html"%}
+
+    {% block content %}
+
+        <div class="container">
+
+            <div class="row">
+
+                <div class="col-lg-12">
+                    <h1 class="page-header">Volunteering Events
+                        <small>Help us out by participating in our events</small>
+                    </h1>
+                    <ol class="breadcrumb">
+                        <li><a href="{{ url_for('index') }}">Home</a>
+                        </li>
+                        <li class="active">Volunteer</li>
+                    </ol>
+                </div>
+
+            </div>
+
+            <div class="row">
+
+                {% for x in range(0,7)%}
+                    <div class="col-sm-3">
+                        <div class="panel panel-default text-center">
+                            <div class="panel-heading">
+                                <strong>EVENT NAME</strong>
+                            </div>
+                            <div class="panel-body">
+                                <img class="img-circle" src="static/images/volunteer.png">
+                            </div>
+                            <ul class="list-group">
+                                <li class="list-group-item">Above goes a picture of the type of volunteer (this will be latest event that is present)</li>
+                                <li class="list-group-item">What volunteer will be doing </li>
+                                <li class="list-group-item">How many hours volunteer will recieve (if they recieve any}</li>
+                                <li class="list-group-item">Location of Event</li>
+                                <li class="list-group-item">How many spots are open</li>
+                                <li class="list-group-item"><a class="btn btn-primary">Sign Up Now!</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+
+        
+    {% endblock %}
