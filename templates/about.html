@@ -1,0 +1,92 @@
+{% extends "layout.html"%}
+    {% block content %}
+        <div class="container">
+
+            <div class="row">
+
+                <div class="col-lg-12">
+                    <h1 class="page-header">About
+                        <small>It's Nice to Meet You!</small>
+                    </h1>
+                    <ol class="breadcrumb">
+                        <li><a href="{{ url_for('index') }}">Home</a>
+                        </li>
+                        <li class="active">About</li>
+                    </ol>
+                </div>
+
+            </div>
+
+            <div class="row">
+
+                <div class="col-md-6">
+                    <img class="img-responsive" src="http://placehold.it/750x450">
+                </div>
+                <div class="col-md-6">
+                    <h2>Our Mission</h2>
+                    
+                    <p>AID is a non-profit, all-volunteer organization that partners with grassroots organizations in India. AID is dedicated to participating in equitable social, economic and environmental development in India. This includes support for projects in areas such as literacy, primary health care, education, women’s self help groups, vocational training, and struggles for justice and equity. </p>
+
+                    <p>AID Today: </p>
+                    <p>What started as a dream of a few graduate students has now grown to the vision of many – students and professionals alike. The AID family currently has 36 chapters in the US, and 10 chapters in India. AID has attracted over 1000 active volunteers and several thousand donors. Visit www.aidindia.org for more information.</p>
+
+ 
+
+                    <p>AID Bay Area: </p> 
+                    <p>The Bay Area chapter of AID was formed in August 1997. We are an enthusiastic group of working professionals, students and stay at home spouses who share the vision and aspiration of fellow AID volunteers. We share a willingness to make a difference – and learn – and unlearn - as we work together for the common good.</p>
+
+                    <p>We meet once in two weeks and discuss our action plans for the days ahead. We evaluate projects, discuss current issues and affairs concerning development in India, and most important, determine how we can contribute. The activities of the chapter can be broadly classified into 5 categories: projects, campaigns, publicity, chapter administration and fund-raising activities. Volunteers choose to participate in one or more of these areas of work depending on their skills, interests and availability of time. </p>
+
+                    <p>We invite you to join us. We would appreciate any kind of support: it can be your valuable time; it can be monetary; or it can be just spreading the word about us. No special qualification is needed for a new volunteer to start participating with chapter activities.</p>
+
+                    <p>We have taken Mahatma Gandhi’s maxim as our inspiration. And we hope one day soon to realize our dreams. So come join us today to make a difference for tomorrow.</p>
+
+                </div>
+
+            </div>
+
+            <!-- Team Member Profiles -->
+
+            <div class="row">
+
+                <div class="col-lg-12">
+                    <h2 class="page-header">Our Team</h2>
+                </div>
+            {% for x in range(0,2)%}
+                <div class="col-sm-4">
+                    <img class="img-responsive" src="http://placehold.it/750x450">
+                    <h3>John Smith
+                        <small>Job Title</small>
+                    </h3>
+                    <p>What does this team member do? Keep it short! This is also a great spot for social links!</p>
+                    <ul class="list-unstyled list-inline list-social-icons">
+                        <li class="tooltip-social facebook-link"><a href="#facebook-profile" data-toggle="tooltip" data-placement="top" title="Facebook"><i class="fa fa-facebook-square fa-2x"></i></a>
+                        </li>
+                        <li class="tooltip-social linkedin-link"><a href="#linkedin-profile" data-toggle="tooltip" data-placement="top" title="LinkedIn"><i class="fa fa-linkedin-square fa-2x"></i></a>
+                        </li>
+                        <li class="tooltip-social twitter-link"><a href="#twitter-profile" data-toggle="tooltip" data-placement="top" title="Twitter"><i class="fa fa-twitter-square fa-2x"></i></a>
+                        </li>
+                        <li class="tooltip-social google-plus-link"><a href="#google-plus-profile" data-toggle="tooltip" data-placement="top" title="Google+"><i class="fa fa-google-plus-square fa-2x"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            {% endfor %}
+
+            <div class="row">
+
+                <div class="col-lg-12">
+                    <h2 class="page-header">Our Partners</h2>
+                </div>
+
+            {% for x in range(0,2)%}
+                <div class="col-md-2 col-sm-4 col-xs-6">
+                    <img class="img-responsive img-customer" src="http://placehold.it/500x300">
+                </div>
+            {% endfor %}
+
+
+            </div>
+
+        </div>
+    {% endblock %}
+

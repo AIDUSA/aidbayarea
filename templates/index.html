@@ -1,0 +1,197 @@
+{% extends "layout.html" %}
+    {% block content %}
+        <div id="myCarousel" class="carousel slide">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+            </ol>
+
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner">
+                <div class="item active">
+                    <div class="fill" style="background-image:url('static/images/temp1.jpg');"></div>
+                    <div class="carousel-caption">
+                        <h1>Info</h1>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="fill" style="background-image:url('static/images/temp2.jpg');"></div>
+                    <div class="carousel-caption">
+                        <h1>Info</h1>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="fill" style="background-image:url('static/images/temp3.jpg');"></div>
+                    <div class="carousel-caption">
+                        <h1>Info
+                        </h1>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Controls -->
+            <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                <span class="icon-prev"></span>
+            </a>
+            <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                <span class="icon-next"></span>
+            </a>
+        </div>
+
+        <div class="section">
+
+            <div class="container">
+
+                <div class="row">
+                    <div class="col-lg-4 col-md-4">
+                        <img class="img-circle" src="static/images/mission.png">
+                        <h3> Our Mission </h3>
+                        <p>AID supports grassroots organizations in India and initiates efforts in various interconnected spheres such as education, livelihoods, natural resources, health, women's empowerment and social justice.</p>
+
+                        <div class="col-lg-2 col-md-4">
+                            <a class="btn btn-lg btn-primary pull-left" href="{{ url_for('about') }}">Our Mission</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4">
+                        <img class="img-circle" src="static/images/donate.png">
+                        <h3> Donate </h3>
+                        <p>Help us make a positive difference. Your support would help us create many stories of Courage, Commitment & Change. All your donations are tax deductible under 501(c)(3)</p>
+                        <div class="col-lg-4 col-md-4">
+                            <a class="btn btn-lg btn-primary pull-left" href="{{ url_for('donate') }}">Donate</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4">
+                        <img class="img-circle" src="static/images/volunteer.png">
+                        <h3>Volunteer </h3>
+                        <p>Come join us in addressing grassroot level issues like literacy, healthcare, livelihood, etc.. Help us with project reviews, treasury, organize talks, onsite project visits in India etc..</p>
+                        <div class="col-lg-2 col-md-4">
+                            <a class="btn btn-lg btn-primary pull-left" href="{{ url_for('volunteer') }}" >Volunteer</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        {% for x in v_home %}
+                <div class="section-colored">
+
+                    <div class="container">
+
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-6">
+                                <h2>{{ x.title }} </h2>
+                                <ul>
+                                    <li> {{ x.info }}</li>
+                                </ul>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-6">
+                                <img class="img-responsive" src="static/images/doge.png">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        {% endfor %}
+
+
+<!--        <div class="section-colored">
+
+            <div class="container">
+
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-6">
+                        <h2>Run For India </h2>
+                        <ul>
+                            <li> Info </li>
+                            <li> Info </li>
+                            <li> Info </li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6">
+                        <img class="img-responsive" src="static/images/doge.png">
+                    </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="section">
+
+            <div class="container">
+
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-6">
+                        <div style="width:300px;height:200px;background-color:#e37259;position:relative" onmouseover="setPropertyTo('icon_RBR',60,'bottom')" onmouseout="setPropertyTo('icon_RBR',10,'bottom')"><div class="topBorder">ROOBAROO</div><img src="static/images/roobaroo.png" id="icon_RBR" class="overlayIcon" style="left:50px;"/></div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6">
+                       <h2>Roobaroo </h2>
+                        <ul>
+                            <li> Info </li>
+                            <li> Info </li>
+                            <li> Info </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="section-colored">
+
+            <div class="container">
+
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-6">
+                        <h2>Banquet </h2>
+                        <ul>
+                            <li> Info </li>
+                            <li> Info </li>
+                            <li> Info </li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6">
+                                 <div style="width:300px;height:200px;background-color:#e4c35c;float:right;position:relative" onmouseover="setPropertyTo('icon_BAQ_L',60,'left'); setPropertyTo('icon_BAQ_R',60,'right')" onmouseout="setPropertyTo('icon_BAQ_L',10,'left'); setPropertyTo('icon_BAQ_R',10,'right')">
+                                    <div class="topBorder">BANQUET</div>
+                                    <img src="static/images/banquet_fork.png" id="icon_BAQ_L" class="overlayIcon" style="left:10px;"/>
+                                    <img src="static/images/banquet_plate.png" id="icon_BAQ_P" class="overlayIcon" style="left:110px;"/>
+                                    <img src="static/images/banquet_knife.png" id="icon_BAQ_R" class="overlayIcon" style="right:10px;"/>
+                                </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="section">
+
+            <div class="container">
+
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-6">
+                        <div style="width:300px;height:200px;background-color:#e65166;position:relative" onmouseover="setPropertyTo('icon_PFI',30,'bottom'); setPropertyTo('icon_PFI',10,'right'); setPropertyTo('icon_PFI_B',150,'bottom');" onmouseout="setPropertyTo('icon_PFI',10,'bottom'); setPropertyTo('icon_PFI',20,'right'); setPropertyTo('icon_PFI_B',120,'bottom');">
+                                    <div class="topBorder">PLAY FOR INDIA</div>
+                                    <img src="static/images/PFI.png" id="icon_PFI" class="overlayIcon" style="left:20px;"/>
+                                    <img src="static/images/PFI_ball.png" id="icon_PFI_B" class="overlayIcon" style="left:70px;bottom:140px"/>
+                                </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6">
+                       <h2>Play For India </h2>
+                        <ul>
+                            <li> Info </li>
+                            <li> Info </li>
+                            <li> Info </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+        </div> -->
+    {% endblock %}

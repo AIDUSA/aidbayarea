@@ -1,0 +1,47 @@
+{% extends "layout.html"%}
+
+    {% block content %}
+
+        <div class="container">
+
+            <div class="row">
+
+                <div class="col-lg-12">
+                    <h1 class="page-header">Events
+                        <small>See our events</small>
+                    </h1>
+                    <ol class="breadcrumb">
+                        <li><a href="{{ url_for('index') }}">Home</a>
+                        </li>
+                        <li class="active">Events</li>
+                    </ol>
+                </div>
+
+            </div>
+
+            <div class="row">
+
+                {% for e in my_events%}
+                    <div class="col-sm-2">
+                        <div class="panel panel-default text-center">
+                            <div class="panel-heading">
+                                <strong> {{ e.name }} </strong>
+                            </div>
+                            <div class="panel-body">
+                                <img class="img-circle" src={{"static/images/events/" + e.event_image}}>
+                            </div>
+                            <ul class="list-group">
+                                <li class="list-group-item">Above goes a picture of the type of volunteer (this will be latest event that is present)</li>
+                                <li class="list-group-item">{{e.description}} </li>
+                                <li class="list-group-item">{{e.date}}</li>
+                                <li class="list-group-item">{{e.area}}</li>
+                                <li class="list-group-item">{{e.year}}</li>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+
+        
+    {% endblock %}

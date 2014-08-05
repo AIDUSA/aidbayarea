@@ -1,0 +1,57 @@
+{% extends "layout.html"%}
+
+    {% block content %}
+
+        <div class="container">
+
+            <div class="row">
+
+                <div class="col-lg-12">
+                    <h1 class="page-header">{{current_project.name}}
+                    </h1>
+                    <ol class="breadcrumb">
+                        <li><a href="{{ url_for('index') }}">Home</a>
+                        </li>
+                        <li class="active">Project - {{ current_project.name }}</li>
+                    </ol>
+                </div>
+
+            </div>
+
+            <div class="row">
+
+                <div class="col-md-8">
+                    <img class="img-responsive" src="http://placehold.it/750x500">
+                </div>
+
+                <div class="col-md-4">
+                    <h3> {{ current_project.name }} </h3>
+                    <ul>
+                        <li>{{ current_project.description}}</li>
+                        <li>{{ current_project.year }} </li> 
+                        <li>{{ current_project.amount }}</li>
+                        <li>{{ current_project.area }}</li>
+                        <li>{{ current_project.ngo }}</li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="row">
+
+                <div class="col-lg-12">
+                    <h3 class="page-header">Other Projects</h3>
+                </div>
+
+                {% for c in all_projects %}
+                    <div class="col-sm-3 col-xs-6">
+                        <a href="{{ url_for('projectdetails', project_id=c.id )}}">
+                            <img class="img-responsive img-customer" src="http://placehold.it/500x300">
+                            <h2> {{c.name}} </h2>
+                        </a>
+                    </div>
+                {% endfor %}
+
+            </div>
+        </div>
+    {% endblock %}
