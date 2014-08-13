@@ -94,5 +94,5 @@ if __name__ == '__main__':
 	admin.add_view(ProjectView(Projects))
 	admin.add_view(EventView(Events))
 	path = op.join(op.dirname(__file__), 'static/images')
-	admin.add_view(FileAdmin(path, name='Project Images'))
+	admin.add_view(FileAdmin(path, name='Images'))
 	app.run(debug=True)

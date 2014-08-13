@@ -76,122 +76,63 @@
 
         </div>
 
-        {% for x in v_home %}
-                <div class="section-colored">
+        <hr>
 
-                    <div class="container">
-
-                        <div class="row">
-                            <div class="col-lg-6 col-md-6 col-sm-6">
-                                <h2>{{ x.title }} </h2>
-                                <ul>
-                                    <li> {{ x.info }}</li>
-                                </ul>
+        <span class="divGreenRect">&nbsp;&nbsp;&nbsp;POPULAR EVENTS&nbsp;&nbsp;&nbsp;</span>
+            <table style="width:100%;padding-top:40px">
+                <tr>
+                    <td style="width:25%">
+                            <div style="width:200px;height:200px;background-color:#4dbddd;position:relative" onmouseover="setPropertyTo('icon_RFI',100,'left')" onmouseout="setPropertyTo('icon_RFI',30,'left')">
+                                <div class="topBorder">RUN FOR INDIA</div>
+                                <img src="static/images/RFI.png" id="icon_RFI" class="overlayIcon" style="left:30px;"/>
                             </div>
-                            <div class="col-lg-6 col-md-6 col-sm-6">
-                                <img class="img-responsive" src="static/images/doge.png">
+                    </td>
+                    <td style="width:25%;text-align:-webkit-center">
+                            <div style="width:200px;height:200px;background-color:#e37259;position:relative" onmouseover="setPropertyTo('icon_RBR',60,'bottom')" onmouseout="setPropertyTo('icon_RBR',10,'bottom')">
+                                <div class="topBorder">ROOBAROO</div>
+                                <img src="static/images/roobaroo.png" id="icon_RBR" class="overlayIcon" style="right:20px;"/>
                             </div>
-                        </div>
-                    </div>
-                </div>
-        {% endfor %}
+                    </td>
+                    <td style="width:25%;text-align:-webkit-center">
+                            <div style="width:200px;height:200px;background-color:#e4c35c;position:relative" onmouseover="setPropertyTo('icon_BAQ_L',40,'left'); setPropertyTo('icon_BAQ_R',40,'right')" onmouseout="setPropertyTo('icon_BAQ_L',10,'left'); setPropertyTo('icon_BAQ_R',10,'right')">
+                                <div class="topBorder">BANQUET</div>
+                                <img src="static/images/banquet_fork.png" id="icon_BAQ_L" class="overlayIcon" style="left:10px;"/>
+                                <img src="static/images/banquet_plate.png" id="icon_BAQ_P" class="overlayIcon" style="left:68px;"/>
+                                <img src="static/images/banquet_knife.png" id="icon_BAQ_R" class="overlayIcon" style="right:10px;"/>
+                            </div>
+                    </td>
+                    <td style="width:25%">
+                            <div style="width:200px;height:200px;background-color:#e65166;float:right;position:relative" onmouseover="setPropertyTo('icon_PFI',30,'bottom'); setPropertyTo('icon_PFI',10,'right'); setPropertyTo('icon_PFI_B',150,'bottom');" onmouseout="setPropertyTo('icon_PFI',10,'bottom'); setPropertyTo('icon_PFI',20,'right'); setPropertyTo('icon_PFI_B',120,'bottom');">
+                                <div class="topBorder">PLAY FOR INDIA</div>
+                                <img src="static/images/PFI.png" id="icon_PFI" class="overlayIcon" style="right:20px;"/>
+                                <img src="static/images/PFI_ball.png" id="icon_PFI_B" class="overlayIcon" style="right:10px;bottom:120px"/>
+                            </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width:25%;vertical-align:top">
+                        <div class="tableLeftAlignContent" style="width:200px">Get trained for a marathon and help raise funds for those in need</div>
+                    </td>
+                    <td style="width:25%;vertical-align:top;text-align:-webkit-center">
+                        <div class="tableLeftAlignContent" style="width:200px">Attend our musical conerts, have fun and let us donate the profits to those in need</div>
+                    </td>
+                    <td style="width:25%;vertical-align:top;text-align:-webkit-center">
+                        <div class="tableLeftAlignContent" style="width:200px">Have dinner with your favorite celebreties while the profits are donated to poor</div>
+                    </td>
+                    <td style="width:25%;vertical-align:top;">
+                        <div class="tableLeftAlignContent" style="width:200px;float:right">Participate in our sports events, win prizes and help those in need</div>
+                    </td>
+                </tr>
+            </table>
 
+        {% block customscripts %}
 
-<!--        <div class="section-colored">
+        <script>
+            function setPropertyTo(itemID, value, property) {
+                var item = document.getElementById(itemID);
+                item.style[property] = value + "px";
+            }
+        </script>
+        {% endblock %}
 
-            <div class="container">
-
-                <div class="row">
-                    <div class="col-lg-6 col-md-6 col-sm-6">
-                        <h2>Run For India </h2>
-                        <ul>
-                            <li> Info </li>
-                            <li> Info </li>
-                            <li> Info </li>
-                        </ul>
-                    </div>
-                    <div class="col-lg-6 col-md-6 col-sm-6">
-                        <img class="img-responsive" src="static/images/doge.png">
-                    </div>
-                    </div>
-                </div>
-
-            </div>
-
-        </div>
-
-        <div class="section">
-
-            <div class="container">
-
-                <div class="row">
-                    <div class="col-lg-6 col-md-6 col-sm-6">
-                        <div style="width:300px;height:200px;background-color:#e37259;position:relative" onmouseover="setPropertyTo('icon_RBR',60,'bottom')" onmouseout="setPropertyTo('icon_RBR',10,'bottom')"><div class="topBorder">ROOBAROO</div><img src="static/images/roobaroo.png" id="icon_RBR" class="overlayIcon" style="left:50px;"/></div>
-                    </div>
-                    <div class="col-lg-6 col-md-6 col-sm-6">
-                       <h2>Roobaroo </h2>
-                        <ul>
-                            <li> Info </li>
-                            <li> Info </li>
-                            <li> Info </li>
-                        </ul>
-                    </div>
-                </div>
-
-            </div>
-
-        </div>
-
-        <div class="section-colored">
-
-            <div class="container">
-
-                <div class="row">
-                    <div class="col-lg-6 col-md-6 col-sm-6">
-                        <h2>Banquet </h2>
-                        <ul>
-                            <li> Info </li>
-                            <li> Info </li>
-                            <li> Info </li>
-                        </ul>
-                    </div>
-                    <div class="col-lg-6 col-md-6 col-sm-6">
-                                 <div style="width:300px;height:200px;background-color:#e4c35c;float:right;position:relative" onmouseover="setPropertyTo('icon_BAQ_L',60,'left'); setPropertyTo('icon_BAQ_R',60,'right')" onmouseout="setPropertyTo('icon_BAQ_L',10,'left'); setPropertyTo('icon_BAQ_R',10,'right')">
-                                    <div class="topBorder">BANQUET</div>
-                                    <img src="static/images/banquet_fork.png" id="icon_BAQ_L" class="overlayIcon" style="left:10px;"/>
-                                    <img src="static/images/banquet_plate.png" id="icon_BAQ_P" class="overlayIcon" style="left:110px;"/>
-                                    <img src="static/images/banquet_knife.png" id="icon_BAQ_R" class="overlayIcon" style="right:10px;"/>
-                                </div>
-                    </div>
-                </div>
-
-            </div>
-
-        </div>
-
-        <div class="section">
-
-            <div class="container">
-
-                <div class="row">
-                    <div class="col-lg-6 col-md-6 col-sm-6">
-                        <div style="width:300px;height:200px;background-color:#e65166;position:relative" onmouseover="setPropertyTo('icon_PFI',30,'bottom'); setPropertyTo('icon_PFI',10,'right'); setPropertyTo('icon_PFI_B',150,'bottom');" onmouseout="setPropertyTo('icon_PFI',10,'bottom'); setPropertyTo('icon_PFI',20,'right'); setPropertyTo('icon_PFI_B',120,'bottom');">
-                                    <div class="topBorder">PLAY FOR INDIA</div>
-                                    <img src="static/images/PFI.png" id="icon_PFI" class="overlayIcon" style="left:20px;"/>
-                                    <img src="static/images/PFI_ball.png" id="icon_PFI_B" class="overlayIcon" style="left:70px;bottom:140px"/>
-                                </div>
-                    </div>
-                    <div class="col-lg-6 col-md-6 col-sm-6">
-                       <h2>Play For India </h2>
-                        <ul>
-                            <li> Info </li>
-                            <li> Info </li>
-                            <li> Info </li>
-                        </ul>
-                    </div>
-                </div>
-
-            </div>
-
-        </div> -->
     {% endblock %}

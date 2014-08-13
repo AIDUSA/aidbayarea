@@ -44,7 +44,7 @@
                 </div>
 
                 {% for c in all_projects %}
-                    <div class="col-sm-3 col-xs-6">
+                    <div class="col-sm-2 col-xs-6">
                         <a href="{{ url_for('projectdetails', project_id=c.id )}}">
                             <img class="img-responsive img-customer" src="http://placehold.it/500x300">
                             <h2> {{c.name}} </h2>
@@ -54,4 +54,48 @@
 
             </div>
         </div>
+        <img id="downImage" src="/static/images/Boy.png" style="position:absolute;right:30px;">
+        <img id="upImage" src="/static/images/Cap.png" style="position:absolute;right:30px;">
+        <img id="footer">
+
+        {% block customscripts %}
+            <script>
+                var initialTop = 120;
+                var imageOffset = 40;
+                var finalTop = 0;
+                var scrollBy = 0;
+                
+                function initialize() {
+                    window.onscroll = setAssetPositions;
+                    window.onload = setAssetPositions;
+                    window.onresize = setAssetPositions;
+                    
+                    upImage.style.top = initialTop + "px";
+                }
+                
+                function setAssetPositions() {
+                    var footer = document.getElementById("footer");
+                    var downImage = document.getElementById("downImage");
+                    var upImage = document.getElementById("upImage");
+                    
+                    var viewportOffset = footer.getBoundingClientRect();
+
+                    var downVal = document.body.scrollTop + window.innerHeight - downImage.height;
+                    
+                    if( downVal < (footer.offsetTop - downImage.height) )
+                        downImage.style.top=downVal + "px";
+                    else
+                        downImage.style.top = (footer.offsetTop - downImage.height) + "px";
+                    
+                    var totalScroll = document.body.scrollHeight - window.innerHeight;
+                    var finalTop = (footer.offsetTop - downImage.height - imageOffset);
+                    var scrollBy = (finalTop - initialTop) / totalScroll;
+                    
+                    upImage.style.top = (initialTop + document.body.scrollTop * scrollBy) + "px";
+                }
+                
+                initialize();
+            </script>
+        {% endblock %}
+
     {% endblock %}
