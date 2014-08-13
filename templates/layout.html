@@ -10,6 +10,7 @@
 				<link rel="stylesheet" media="screen" type="text/css" href="{{url_for('static', filename='css/bootstrap.css')}}"/>
 				<link rel="stylesheet" media="screen" type="text/css" href="{{url_for('static', filename='css/modern-business.css')}}"/>
 				<link rel="stylesheet" media="screen" type="text/css" href="{{url_for('static', filename='font-awesome/css/font-awesome.min.css')}}"/>
+				<link rel="stylesheet" media="screen" type="text/css" href="{{url_for('static', filename='css/main.css')}}"/>
 			{% endblock %}
 
 			{% block customstyles %}
@@ -31,7 +32,7 @@
 		                </button>
 		                <!-- You'll want to use a responsive image option so this logo looks good on devices - I recommend using something like retina.js (do a quick Google search for it and you'll find it) -->
 		                <a class="navbar-logo" href="{{ url_for('index') }}">
-		                    <img src="static/images/AIDLogo.png" alt=""></img>
+		                    <img src="/static/images/AIDLogo.png" alt=""></img>
 		                </a>
 		                <a class="navbar-brand" href="{{ url_for('index') }}">Association for India's Development<br>Bay Area Chapter</a>
 		            </div>
@@ -39,7 +40,7 @@
 		            <!-- Collect the nav links, forms, and other content for toggling -->
 		            <div>
 		                <a class="navbar-bridge">
-		                    <img src="static/images/bridge.png" alt=""></img>
+		                    <img src="/static/images/bridge.png" alt=""></img>
 		                </a>
 		            </div>
 		            <div class="collapse navbar-collapse navbar-ex1-collapse">

@@ -747,8 +747,6 @@ pre code {
 }
 .containerfooter {
 
-  margin-right: auto;
-  margin-left: auto;
 }
 
 @media (min-width: 768px) {
@@ -2089,7 +2087,7 @@ fieldset[disabled] .btn-default.active {
 }
 .btn-primary {
   color: #fff;
-  background-color: #663399;
+  background-color: #3db669;
   border-color: #357ebd;
 }
 .btn-primary:hover,
@@ -4055,11 +4053,11 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   color: #333;
 }
 .navbar-inverse {
-  background-color: #639;
+  background-color: #3db669;
   border-color: #080808;
 }
 .navbar-inverse .navbar-brand {
-  color: #999;
+  color: #FFF;
 }
 .navbar-inverse .navbar-brand:hover,
 .navbar-inverse .navbar-brand:focus {
@@ -4070,7 +4068,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   color: #999;
 }
 .navbar-inverse .navbar-nav > li > a {
-  color: #999;
+  color: #FFF;
 }
 .navbar-inverse .navbar-nav > li > a:hover,
 .navbar-inverse .navbar-nav > li > a:focus {
@@ -4196,7 +4194,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .pagination > li > a:hover,
 .pagination > li > span:hover,
 .pagination > li > a:focus,
-.pagination > li > span:focus {
+.pagination > li > :focus {
   color: #2a6496;
   background-color: #eee;
   border-color: #ddd;

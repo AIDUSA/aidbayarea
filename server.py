@@ -8,6 +8,7 @@ from flask.ext.admin.contrib.mongoengine import ModelView
 from flask.ext.admin.contrib.fileadmin import FileAdmin
 import os.path as op
 
+
 app = Flask(__name__)
 app.config['DEBUG'] = True
 app.config['SECRET_KEY'] = 'super-secret'
@@ -93,5 +94,5 @@ if __name__ == '__main__':
 	admin.add_view(ProjectView(Projects))
 	admin.add_view(EventView(Events))
 	path = op.join(op.dirname(__file__), 'static/images')
-	admin.add_view(FileAdmin(path, name='Project Images'))
+	admin.add_view(FileAdmin(path, name='Images'))
 	app.run(debug=True)
